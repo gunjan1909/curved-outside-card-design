@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+:root {
+   --teal: #116D6E
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: var(--teal);
+}
+
+.card {
+   position: relative;
+   width: 20rem;
+   height: 27rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.card .box {
+   position: relative;
+   width: 110%;
+   height: 12.5rem;
+   background: red;
+   border-radius: 15px;
+}
+
+.card .box:nth-child(1)::before {
+   content: "";
+   position: absolute;
+   top: 6.625rem;
+   left: -1px;
+   width: 1.25rem;
+   height: 1.25rem;
+   background: transparent;
+   z-index: 10;
+   border-bottom-left-radius: 20px;
+   box-shadow: -6px 6px var(--teal);
+}
+
+.card .box:nth-child(1)::after {
+   content: "";
+   position: absolute;
+   bottom: 0px;
+   left: 6.35rem;
+   width: 1.25rem;
+   height: 1.25rem;
+   background: transparent;
+   z-index: 10;
+   border-bottom-left-radius: 20px;
+   box-shadow: -6px 6px var(--teal);
+}
+
+.card .box:nth-child(2) {
+   background: white;
+   height: 13.75rem;
+   width: 100%;
+}
+
+.card .box:nth-child(2)::before {
+   content: "";
+   position: absolute;
+   bottom: 6.625rem;
+   left: -1px;
+   width: 1.25rem;
+   height: 1.25rem;
+   background: transparent;
+   z-index: 10;
+   border-top-left-radius: 20px;
+   box-shadow: -6px -6px var(--teal);
+}
+
+.card .box:nth-child(2)::after {
+   content: "";
+   position: absolute;
+   top: -1px;
+   left: 6.7rem;
+   width: 1.25rem;
+   height: 1.25rem;
+   background: transparent;
+   z-index: 10;
+   border-top-left-radius: 20px;
+   box-shadow: -6px -6px var(--teal);
+}
+
+.card .circle {
+   position: absolute;
+   top: 50%;
+   left: -4.5rem;
+   transform: translateY(-50%);
+   width: 11.25rem;
+   height: 11.25rem;
+   background: greenyellow;
+   border-radius: 50%;
+   border: 10px solid var(--teal);
+}
+
+.card .circle .imgbx,
+.card .box .imgbx {
+   position: absolute;
+   inset: 0;
+   overflow: hidden;
+   border-radius: 50%;
+}
+
+.card .box .imgbx {
+   border-radius: 15px;
+}
+
+.card .circle .imgbx img,
+.card .box .imgbx video {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+
+}
+
+.card .box .content {
+   position: absolute;
+   inset: 0;
+   padding: 1.8rem 1.4rem 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.5rem
+}
+
+.card .box .content h2 {
+   width: 100%;
+   padding-left: 7rem;
+   text-transform: uppercase;
+   font-size: 1.1em;
+   letter-spacing: 0.1em;
+   font-weight: 600;
+   line-height: 1.1em;
+   color: #333;
+}
+
+.card .box .content h2 span {
+   font-size: 0.75em;
+   font-weight: 400;
+   letter-spacing: 0.05em;
+   color: red;
+   text-transform: initial;
+}
+
+.card .box .content ul {
+   position: relative;
+   top: 1rem;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   width: 100%;
+   padding: 0 0.625rem;
+   justify-content: space-evenly;
+}
+
+.card .box .content ul li {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   padding: 0 0.625rem;
+   font-size: 0.85em;
+   font-weight: 500;
+   color: #999;
+}
+
+.card .box .content ul li:not(:last-child) {
+   border-right: 1px solid #ccc;
+}
+
+.card .box .content ul li span {
+   font-size: 1.65em;
+   color: #333;
+}
+
+.card .box .content button {
+   /* width: 100%; */
+   position: relative;
+   top: 25px;
+   padding: 0.5rem 1.875rem;
+   border: none;
+   outline: none;
+   background: #03a9f4;
+   border-radius: 1.875rem;
+   color: white;
+   font-size: 1em;
+   text-transform: uppercase;
+   letter-spacing: 0.2em;
+   font-weight: 500;
+   cursor: pointer;
+   border: 5px solid var(--teal);
+   /* box-shadow: 0 0 0 10px white; */
+   transition: 0.5s;
+}
+
+.card .box .content button:hover {
+   letter-spacing: 0.5em;
+   background: #ff3d7f;
+}
